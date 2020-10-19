@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - HW 7</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="destiny-app">
+   <div v-for="card in cards">
+    <div v-if="card.color==='blue'">
+     <div class="card blue">
+       <div class="img">
+      <img :src="card.img">
+    </div>
+    <!--img goes here-->
+    <div class="health"><h3>{{card.health}}</h3></div>
+    <div v-if="card.rarity">
+      <div class="rarity rare"><h3>{{card.setNumber}}</h3></div>
+    </div>
+    <div v-else>
+      <div class="rarity legendary"><h3>{{card.setNumber}}</h3></div>
+    </div>
+    <div class="name"><h3>{{card.name}}</h3></div>
+    <div v-if="card.affl==='hero'">
+      <div class="affl hero"><h3>{{card.affl}}</h3></div>
+    </div>
+    <div v-else-if="card.affl==='villain'">
+      <div class="affl monkey"><h3>{{card.affl}}</h3></div>
+    </div>
+  </div>
+  </div>
+
+      
+     <div v-else-if="card.color==='yellow'">
+     <div class="card yellow">
+    <div class="img">
+      <img :src="card.img">
+    </div>
+    <div class="health"><h3>{{card.health}}</h3></div>
+    <div v-if="card.rarity">
+      <div class="rarity rare"><h3>{{card.setNumber}}</h3></div>
+    </div>
+    <div v-else>
+      <div class="rarity legendary"><h3>{{card.setNumber}}</h3></div>
+    </div>
+    <div class="name"><h3>{{card.name}}</h3></div>
+    <div v-if="card.affl==='hero'">
+      <div class="affl hero"><h3>{{card.affl}}</h3></div>
+    </div>
+    <div v-else-if="card.affl==='villain'">
+      <div class="affl monkey"><h3>{{card.affl}}</h3></div>
+    </div>
+  </div>
+  </div>
+      
+      
+  <div v-else>
+     <div class="card red">
+    <div class="img">
+      <img :src="card.img">
+    </div>
+    <div class="health"><h3>{{card.health}}</h3></div>
+    <div v-if="card.rarity">
+      <div class="rarity rare"><h3>{{card.setNumber}}</h3></div>
+    </div>
+    <div v-else>
+      <div class="rarity legendary"><h3>{{card.setNumber}}</h3></div>
+    </div>
+    <div class="name"><h3>{{card.name}}</h3></div>
+    <div v-if="card.affl==='hero'">
+      <div class="affl hero"><h3>{{card.affl}}</h3></div>
+    </div>
+    <div v-else-if="card.affl==='villain'">
+      <div class="affl monkey"><h3>{{card.affl}}</h3></div>
+    </div>
+  </div>
+  </div>
+  </div>
+</div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
